@@ -5296,6 +5296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8394fdbb32fb4914a33db6e1ba1ba5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValues: {fileID: 114794581973216132}
+  scoreText: {fileID: 114088491404476896}
   zeppelinAimScore: 1000
   luftballonAimScore: 2500
 --- !u!114 &114907764026279702
