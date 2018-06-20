@@ -21,7 +21,7 @@ public class SceneSwitcherJungle : Photon.PunBehaviour, IPunObservable {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		PhotonNetwork.LoadLevel("JungleScene");
+		//PhotonNetwork.LoadLevel("JungleScene");
 		PhotonView view = other.GetComponentInParent<PhotonView> ();
 		Debug.Log (view);
 		if (PhotonNetwork.isMasterClient && view != null) {
