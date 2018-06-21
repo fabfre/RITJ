@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class zeppelinLeftToRight : MonoBehaviour {
+public class zeppelinLeftToRight : Photon.PunBehaviour {
 
 	//spawnObject origin range
 	public int originXmin = -200;
@@ -47,7 +47,7 @@ public class zeppelinLeftToRight : MonoBehaviour {
 
 		if (spanTime <= 0)
 		{
-			GameObject objectClone = Instantiate(objectPrefab, pos, objectPrefab.transform.rotation)as GameObject;
+			GameObject objectClone = PhotonNetwork.Instantiate(objectPrefab.name, pos, objectPrefab.transform.rotation, 0);
 
 			spanTime = 6f;
 

@@ -17,21 +17,17 @@ public class hitBird : Photon.MonoBehaviour {
 		if (other.gameObject.CompareTag ("HitBird"))
 		{
             PhotonView photonView = this.photonView;
-            photonView.RPC("SetCounterText", PhotonTargets.AllBuffered);
-			Destroy (other.gameObject);
+            photonView.RPC("SetCounterText", PhotonTargets.AllBuffered, other.gameObject.GetPhotonView().viewID);
 		}
 	}
 
     [PunRPC]
-	public void SetCounterText (){
-        
-		scoreValues.score = scoreValues.score - Bird;
-		scoreText.text = "Score: " + scoreValues.score.ToString ();
-	}
+    public void SetCounterText(int other)
+    {
 
-    //[PunRPC]
-    //public void UpdateScore()
-    //{
-    //    setCounterText();
-    //}
+        PhotonNetwork.Destroy(PhotonView.Find(other));
+
+        scoreValues.score = scoreValues.score - Bird;
+        scoreText.text = "Score: " + scoreValues.score.ToString();
+    }
 }

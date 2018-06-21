@@ -50,6 +50,7 @@ public class NetworkManager : MonoBehaviour
         //PhotonNetwork.logLevel = PhotonLogLevel.Full;
         //PhotonNetwork.ConnectUsingSettings(_gameVersion);
 		this.initiated = false;
+        InvokeRepeating("spawnBirds", 0f, spawnTime);
 	
     }
 
@@ -72,14 +73,6 @@ public class NetworkManager : MonoBehaviour
         //networkText.text = PhotonNetwork.connectionStateDetailed.ToString();
 
     }
-
-    [PunRPC]
-    public void getHit()
-    {
-        
-    }
-
-    //callbacks von Photon
 
     void spawnBirds()
     {
