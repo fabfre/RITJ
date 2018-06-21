@@ -17,6 +17,7 @@ public class hitBird : Photon.MonoBehaviour {
 		if (other.gameObject.CompareTag ("HitBird"))
 		{
             PhotonView photonView = this.photonView;
+
             photonView.RPC("SetCounterText", PhotonTargets.AllBuffered, other.gameObject.GetPhotonView().viewID);
 		}
 	}
@@ -24,7 +25,6 @@ public class hitBird : Photon.MonoBehaviour {
     [PunRPC]
     public void SetCounterText(int other)
     {
-
         PhotonNetwork.Destroy(PhotonView.Find(other));
 
         scoreValues.score = scoreValues.score - Bird;

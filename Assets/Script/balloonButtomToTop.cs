@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class balloonButtomToTop : MonoBehaviour {
+public class balloonButtomToTop : Photon.PunBehaviour {
 
 	//spawnObject origin range
 	public int originXmin = -250;
@@ -47,7 +47,7 @@ public class balloonButtomToTop : MonoBehaviour {
 
 		if (spanTime <= 0)
 		{
-			GameObject objectClone = Instantiate(objectPrefab, pos, objectPrefab.transform.rotation)as GameObject;
+            GameObject objectClone = PhotonNetwork.Instantiate(objectPrefab.name, pos, objectPrefab.transform.rotation, 0);
 
 			spanTime = 6f;
 

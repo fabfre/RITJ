@@ -30,7 +30,7 @@ public class BulletController : Photon.MonoBehaviour {
         if (other.gameObject.CompareTag("ZeppelinAim"))
         {
             SetCounterText(other.gameObject.GetPhotonView().viewID);
-
+            PhotonNetwork.RaiseEvent(1, other.gameObject.GetPhotonView().viewID, true, null);
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
@@ -58,13 +58,13 @@ public class BulletController : Photon.MonoBehaviour {
 
     private void OnDisable()
     {
-        PhotonNetwork.OnEventCall += this.OnEvent;
+        PhotonNetwork.OnEventCall -= this.OnEvent;
     }
 
     void OnEvent(byte eventcode, object content, int senderid)
     {
         Debug.Log("OnEvent CONTENT: " + content);
-        Debug.Log("OnEvent CONTENT STRING: " + content.ToString());
+
         if (eventcode == 0)
         {
             scoreText.text = content.ToString();

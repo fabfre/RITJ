@@ -8038,7 +8038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValues: {fileID: 0}
   scoreText: {fileID: 0}
-  Bird: 10
+  Bird: 150
 --- !u!114 &114743014625679918
 MonoBehaviour:
   m_ObjectHideFlags: 1
