@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class BirdFlying : MonoBehaviour
 {
@@ -54,6 +55,10 @@ public class BirdFlying : MonoBehaviour
 //		this.GetComponent<Rigidbody>().isKinematic = true;
 
         enabled = true;
+		this.GetComponent<VRTK_InteractableObject> ().enabled = true;
+		this.GetComponent<VRTK_InteractableObject> ().isGrabbable = true;
+
+
 
         /*
         if (transform.position.y > carpetSurface)

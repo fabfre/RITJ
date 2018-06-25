@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571334, b: 0.3069219, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -7203,11 +7203,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.015
   m_Center: {x: 0, y: -0.015, z: 0}
---- !u!4 &1384464769 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4325329599143354, guid: bc69056f98da83c4ebe3e67b7ee3dded,
-    type: 2}
-  m_PrefabInternal: {fileID: 2119866679}
 --- !u!1 &1387473160
 GameObject:
   m_ObjectHideFlags: 0
@@ -11456,20 +11451,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114998261297808080, guid: bc69056f98da83c4ebe3e67b7ee3dded,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4325329599143354, guid: bc69056f98da83c4ebe3e67b7ee3dded, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 114970268336201658, guid: bc69056f98da83c4ebe3e67b7ee3dded,
-        type: 2}
-      propertyPath: rightSnapHandle
-      value: 
-      objectReference: {fileID: 1384464769}
     - target: {fileID: 114197581976942304, guid: bc69056f98da83c4ebe3e67b7ee3dded,
         type: 2}
       propertyPath: viewIdField
@@ -11479,6 +11460,11 @@ Prefab:
         type: 2}
       propertyPath: instantiationId
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114998261297808080, guid: bc69056f98da83c4ebe3e67b7ee3dded,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc69056f98da83c4ebe3e67b7ee3dded, type: 2}
