@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25329313, g: 0.21699111, b: 0.23320152, a: 1}
+  m_IndirectSpecularColor: {r: 0.21264589, g: 0.21264589, b: 0.21264589, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1203,26 +1203,11 @@ MonoBehaviour:
   type: 0
   pos: {x: 0, y: 0, z: 0}
   cameraPos: {fileID: 794671018}
-  left: 0
-  front: 1
-  right: 2
-  birdOriginXmin: -100
-  birdOriginXmax: 100
-  birdOriginYmin: 0
-  birdOriginYmax: 50
-  birdOriginZmin: 0
-  birdOriginZmax: 50
-  birdsPrefab: {fileID: 1298595143020632, guid: 2ea6e3eefd66145298bb1c5e435d6b10,
-    type: 2}
-  birdsClone: {fileID: 1298595143020632, guid: 2ea6e3eefd66145298bb1c5e435d6b10, type: 2}
-  spawnTime: 2
-  headPrefab: {fileID: 1346101003378874, guid: 34106100e302942558a0bffbb05d5a79, type: 2}
+  headPrefab: {fileID: 1672194064148616, guid: a67bb972484d64a4a8b5954c3550a27f, type: 2}
   leftHandPrefab: {fileID: 1152851664196388, guid: d29a82c712003483b99c480235e58fb0,
     type: 2}
   rightHandPrefab: {fileID: 1089421991423402, guid: 00841a3b082004d8582556f131a788f2,
     type: 2}
-  Loglevel: 1
-  MaxPlayersPerRoom: 2
 --- !u!4 &344739938
 Transform:
   m_ObjectHideFlags: 0
