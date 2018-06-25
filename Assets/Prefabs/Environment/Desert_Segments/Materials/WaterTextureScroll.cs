@@ -17,6 +17,6 @@ public class WaterTextureScroll : MonoBehaviour
 	void Update()
     {
         offset += Time.deltaTime * speed;
-        rend.materials[0].SetTextureOffset("_MainTex", new Vector2(offset, offset));
+        rend.materials[0].SetTextureOffset("_MainTex", new Vector2(0, offset));
     }
 }
