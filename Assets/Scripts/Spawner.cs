@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using VRTK;
 
 public class Spawner : Photon.PunBehaviour {
 
@@ -14,15 +15,6 @@ public class Spawner : Photon.PunBehaviour {
     public int front = 1;
     public int right = 2;
 
-    //spawnBirds origin range
-    /*
-    public int birdOriginXmin = -200;
-    public int birdOriginXmax = 200;
-    public int birdOriginYmin = 0;
-    public int birdOriginYmax = 100;
-    public int birdOriginZmin = 0;
-    public int birdOriginZmax = 100;
-    */
     //Test values
     public int birdOriginXmin = -100;
     public int birdOriginXmax = 100;
@@ -40,13 +32,7 @@ public class Spawner : Photon.PunBehaviour {
 
     private void Start()
     {
-        //InvokeRepeating("spawnBirds", 0f, spanTime);
-    }
-
-    private void FixedUpdate()
-    {
-        if (Input.GetKey(KeyCode.S))
-            spawnBirds();
+        InvokeRepeating("spawnBirds", 0f, spanTime);
     }
 
     void spawnBirds() {
@@ -71,6 +57,11 @@ public class Spawner : Photon.PunBehaviour {
         }
         //Vector3 pos = new Vector3(Random.Range(birdOriginXmin, birdOriginXmax), Random.Range(birdOriginYmin, birdOriginYmax), birdOriginZmax);
 		birdsClone = PhotonNetwork.Instantiate(birdsPrefab.name, pos, Quaternion.Euler(0,0,0), 0);
+
+		birdsClone.GetComponent<VRTK_InteractableObject> ().enabled = true;
+		birdsClone.GetComponent<VRTK_InteractableObject> ().isGrabbable = true;
+
+
 //		birdsClone = Instantiate(birdsPrefab, pos, Quaternion.Euler(0,0,0)) as GameObject;
 		birdsClone.transform.LookAt(cameraPos.transform.position);
 
