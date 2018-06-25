@@ -8,7 +8,7 @@ public class BulletController : Photon.MonoBehaviour {
 	public Text scoreText;
     public int zeppelinAimScore;
 	public int luftballonAimScore;
-
+	public TextMesh text3D;
 
     void Start()
     {
@@ -47,8 +47,8 @@ public class BulletController : Photon.MonoBehaviour {
             scoreValues.score = scoreValues.score + luftballonAimScore;
         }
 
-        scoreText.text = "Score: " + scoreValues.score.ToString();
-        PhotonNetwork.RaiseEvent(0, scoreText.text, true, null);
+		text3D.text = "Score: " + scoreValues.score.ToString();
+		PhotonNetwork.RaiseEvent(0, text3D.text, true, null);
     }
 
     private void OnEnable()

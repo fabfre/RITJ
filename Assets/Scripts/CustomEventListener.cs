@@ -4,6 +4,8 @@
 
 	public class CustomEventListener : MonoBehaviour
 	{
+		public TextMesh ammoText3D;
+		public AmmoContainer ammoContainer;
 		public enum EventQuickSelect
 		{
 			Custom,
@@ -507,12 +509,22 @@
 
 			if (gr.GetGrabbedObject() != null)
 			{
-
 				Leaveblower lc = gr.GetGrabbedObject ().GetComponent ("Leaveblower") as Leaveblower;
-
-				if (lc != null) {
+				if (lc != null && ammoContainer.ammo > 0) {
 					lc.Shoot ();
+					ammoContainer.ammo =  ammoContainer.ammo - 1;
+					ammoText3D.text = "Ammo: " + ammoContainer.ammo.ToString ();
 				}
+
+				BirdController bc = gr.GetGrabbedObject ().GetComponent<BirdController>();
+				Debug.Log (gr.GetGrabbedObject().name);
+				Debug.Log("huhuhu");
+
+				if (bc != null) {
+					bc.loadAmmo();
+					Debug.Log("bc load ammo test");
+				}
+
 			}
 		}
 
