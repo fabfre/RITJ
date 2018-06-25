@@ -51,6 +51,8 @@ public class BirdFlying : MonoBehaviour
         animator.enabled = false;
 
         this.GetComponent<Rigidbody>().useGravity = true;
+//		this.GetComponent<Rigidbody>().isKinematic = true;
+
         enabled = true;
 
         /*

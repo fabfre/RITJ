@@ -70,7 +70,8 @@ public class Spawner : Photon.PunBehaviour {
             Debug.Log("Unknown Bird type");
         }
         //Vector3 pos = new Vector3(Random.Range(birdOriginXmin, birdOriginXmax), Random.Range(birdOriginYmin, birdOriginYmax), birdOriginZmax);
-        birdsClone = PhotonNetwork.Instantiate(birdsPrefab.name, pos, Quaternion.Euler(0,0,0), 0);
+		birdsClone = PhotonNetwork.Instantiate(birdsPrefab.name, pos, Quaternion.Euler(0,0,0), 0);
+//		birdsClone = Instantiate(birdsPrefab, pos, Quaternion.Euler(0,0,0)) as GameObject;
 		birdsClone.transform.LookAt(cameraPos.transform.position);
 
         //working:

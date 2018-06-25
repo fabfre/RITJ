@@ -21,6 +21,20 @@ public class CountdownController : Photon.PunBehaviour, IPunObservable {
 	[SerializeField]
 	private ScoreValues scoreValues;
 
+	[SerializeField]
+	private TextMesh finishText3D;
+
+	[SerializeField]
+	private TextMesh countdown3D;
+
+	[SerializeField]
+	private TextMesh score3D;
+
+	[SerializeField]
+	private TextMesh ammo3D;
+
+	[SerializeField]
+	private Color endColor;
 
 	void Start () {
        
@@ -28,14 +42,19 @@ public class CountdownController : Photon.PunBehaviour, IPunObservable {
 
     void Update () {
         timeLeft -= Time.deltaTime;
-        countdown.text = "Time left: " + Mathf.Round(timeLeft);
+		countdown3D.text = "Time left: " + Mathf.Round(timeLeft);
         if (timeLeft < 0)
         {
             timeLeft = 0;
-			finishText.text = "GAME OVER :( \n" + "Your Score: " + scoreValues.score;
+			countdown3D.text = "GAME OVER";
             //gun.GetComponent<GunControllerScript>().enabled = false;
             //stopGamePlay();
             //Application.LoadLevel("startScene");
+
+//			score3D.color = endColor;
+//			countdown3D.color = endColor;
+//			ammo3D.color = endColor;
+
             startTimeOut();
         }
     }

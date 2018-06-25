@@ -7,6 +7,7 @@ public class hitBird : Photon.MonoBehaviour {
 	public ScoreValues scoreValues;
 	public Text scoreText;
 	public int Bird;
+	public TextMesh text3D;
 
 
 	void Start(){
@@ -28,6 +29,6 @@ public class hitBird : Photon.MonoBehaviour {
         PhotonNetwork.Destroy(PhotonView.Find(other));
 
         scoreValues.score = scoreValues.score - Bird;
-        scoreText.text = "Score: " + scoreValues.score.ToString();
+		text3D.text = "Score: " + scoreValues.score.ToString();
     }
 }

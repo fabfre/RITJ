@@ -12,7 +12,7 @@ public class SceneSwitcher : Photon.PunBehaviour, IPunObservable {
     void Start () {
 		PhotonNetwork.automaticallySyncScene = true;
 		selfTouch = false;
-		partnerTouch = false;
+		partnerTouch = true;
 	}
 	
 	// Update is called once per frame
@@ -26,6 +26,8 @@ public class SceneSwitcher : Photon.PunBehaviour, IPunObservable {
         // Test
 		PhotonView view = other.GetComponentInParent<PhotonView> ();
 		Debug.Log (view);
+		PhotonNetwork.LoadLevel("DesertScene"); // Wieder entfernen
+
 		if (PhotonNetwork.isMasterClient && view != null) {
 			if (view.isMine) {
 				this.selfTouch = true;
