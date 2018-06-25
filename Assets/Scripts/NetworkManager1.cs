@@ -14,7 +14,7 @@ public class NetworkManager1 : MonoBehaviour
     public PhotonLogLevel Loglevel = PhotonLogLevel.Informational;
     public byte MaxPlayersPerRoom = 2;
 
-    string _gameVersion = "2";
+    string _gameVersion = "5";
     bool isConnecting;
 
 
