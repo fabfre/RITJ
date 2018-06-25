@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90266fc7a4ccc4723a1a87f1c9cf43d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headPrefab: {fileID: 1672194064148616, guid: a67bb972484d64a4a8b5954c3550a27f, type: 2}
+  headPrefab: {fileID: 1970653856868070, guid: a67bb972484d64a4a8b5954c3550a27f, type: 2}
   leftHandPrefab: {fileID: 1152851664196388, guid: d29a82c712003483b99c480235e58fb0,
     type: 2}
   rightHandPrefab: {fileID: 1089421991423402, guid: 00841a3b082004d8582556f131a788f2,
