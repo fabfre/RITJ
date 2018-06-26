@@ -4312,42 +4312,42 @@ Prefab:
       propertyPath: cameraPos
       value: 
       objectReference: {fileID: 281196843}
-    - target: {fileID: 114479193359375658, guid: b2a50cb578d934f869f23b411deda45d,
+    - target: {fileID: 114041635388804370, guid: b2a50cb578d934f869f23b411deda45d,
         type: 2}
       propertyPath: viewIdField
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114479193359375658, guid: b2a50cb578d934f869f23b411deda45d,
-        type: 2}
-      propertyPath: instantiationId
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114421161630136666, guid: b2a50cb578d934f869f23b411deda45d,
-        type: 2}
-      propertyPath: viewIdField
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114421161630136666, guid: b2a50cb578d934f869f23b411deda45d,
-        type: 2}
-      propertyPath: instantiationId
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114344577407387476, guid: b2a50cb578d934f869f23b411deda45d,
-        type: 2}
-      propertyPath: viewIdField
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114344577407387476, guid: b2a50cb578d934f869f23b411deda45d,
-        type: 2}
-      propertyPath: instantiationId
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114041635388804370, guid: b2a50cb578d934f869f23b411deda45d,
+        type: 2}
+      propertyPath: instantiationId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114344577407387476, guid: b2a50cb578d934f869f23b411deda45d,
+        type: 2}
+      propertyPath: viewIdField
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114344577407387476, guid: b2a50cb578d934f869f23b411deda45d,
+        type: 2}
+      propertyPath: instantiationId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114421161630136666, guid: b2a50cb578d934f869f23b411deda45d,
+        type: 2}
+      propertyPath: viewIdField
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114421161630136666, guid: b2a50cb578d934f869f23b411deda45d,
+        type: 2}
+      propertyPath: instantiationId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479193359375658, guid: b2a50cb578d934f869f23b411deda45d,
         type: 2}
       propertyPath: viewIdField
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114041635388804370, guid: b2a50cb578d934f869f23b411deda45d,
+    - target: {fileID: 114479193359375658, guid: b2a50cb578d934f869f23b411deda45d,
         type: 2}
       propertyPath: instantiationId
       value: 10

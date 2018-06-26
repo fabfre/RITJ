@@ -5473,10 +5473,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdown: {fileID: 0}
   finishText: {fileID: 114387583919504074}
-  timeLeft: 300
+  timeLeft: 60
   timeOutChangeScene: 4
   scoreValues: {fileID: 114794581973216132}
-  finishText3D: {fileID: 0}
+  finishText3D: {fileID: 102372153253380710}
   countdown3D: {fileID: 102372153253380710}
   score3D: {fileID: 102010412455201568}
   ammo3D: {fileID: 102314053116373720}

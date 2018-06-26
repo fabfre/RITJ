@@ -63,8 +63,8 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 114818533583292550}
   ObservedComponentsFoldoutOpen: 1
-  viewIdField: 0
-  instantiationId: -1
+  viewIdField: 4
+  instantiationId: 4
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!114 &114818533583292550
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdown: {fileID: 0}
   finishText: {fileID: 0}
-  timeLeft: 300
+  timeLeft: 100
   timeOutChangeScene: 4
   scoreValues: {fileID: 0}
   finishText3D: {fileID: 0}
