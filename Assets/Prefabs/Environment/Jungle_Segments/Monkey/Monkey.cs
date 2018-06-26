@@ -44,6 +44,12 @@ public class Monkey : Photon.MonoBehaviour
 
     public void Flee()
     {
+        photonView.RPC("NetworkFlee", PhotonTargets.All);
+    }
+
+    [PunRPC]
+    public void NetworkFlee()
+    {
         GetComponent<Animator>().SetTrigger("flee");
         _hasDidFleeDone = true;
 
