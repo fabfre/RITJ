@@ -513,7 +513,7 @@
 				if (lc != null && ammoContainer.ammo > 0) {
 					lc.Shoot ();
 					ammoContainer.ammo =  ammoContainer.ammo - 1;
-					ammoText3D.text = "Ammo: " + ammoContainer.ammo.ToString ();
+					//ammoText3D.text = "Ammo: " + ammoContainer.ammo.ToString ();
 				}
 
 				CoconutLoader bc = gr.GetGrabbedObject ().GetComponent<CoconutLoader>();

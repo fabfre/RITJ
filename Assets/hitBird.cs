@@ -9,7 +9,6 @@ public class hitBird : Photon.MonoBehaviour {
 	public int Bird;
 	public TextMesh text3D;
 
-
 	void Start(){
 	}
 
@@ -17,9 +16,9 @@ public class hitBird : Photon.MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag ("HitBird"))
 		{
-            PhotonView photonView = this.photonView;
+			PhotonView photonView = PhotonView.Get (this);
 
-            photonView.RPC("SetCounterText", PhotonTargets.AllBuffered, other.gameObject.GetPhotonView().viewID);
+			photonView.RPC("SetCounterText", PhotonTargets.All, other.gameObject.GetPhotonView().viewID);
 		}
 
 		if (other.gameObject.CompareTag ("Coconut"))

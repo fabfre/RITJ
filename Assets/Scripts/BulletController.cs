@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class BulletController : Photon.MonoBehaviour {
 
 	public ScoreValues scoreValues;
-	public Text scoreText;
     public int zeppelinAimScore;
 	public int luftballonAimScore;
 
@@ -80,7 +79,7 @@ public class BulletController : Photon.MonoBehaviour {
 
         if (eventcode == 0)
         {
-            scoreText.text = content.ToString();
+            text3D.text = content.ToString();
         }
 
         if (eventcode == 1)

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +9,7 @@ public class BirdController : MonoBehaviour {
 
 	void Start(){
 
-		GameObject d = GameObject.Find ("AmmoText3D");
+		GameObject d = GameObject.Find ("Texts/AmmoText3D");
 		ammoText3D = d.GetComponent<TextMesh>();
 	}
 
