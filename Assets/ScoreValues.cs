@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreValues : MonoBehaviour {
+public class ScoreValues : Photon.MonoBehaviour, IPunObservable {
 
 	public int score;
 	// Use this for initialization
@@ -13,4 +13,14 @@ public class ScoreValues : MonoBehaviour {
 	void Update () {
 		
 	}
+
+	void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+	{
+		if (stream.isWriting) {
+			stream.SendNext (score);
+		} else {
+			score = (int)stream.ReceiveNext ();
+		}
+	}
+
 }
