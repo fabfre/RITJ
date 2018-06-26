@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monkey : MonoBehaviour
+public class Monkey : Photon.MonoBehaviour
 {
     [SerializeField]
     private GameObject _coconutPrefab;
@@ -31,7 +31,7 @@ public class Monkey : MonoBehaviour
     {
         var hand = transform.Find("rig/MCH-hand_ik_socket.R");
         if (hand == null) Debug.Log("asdf");
-        _currentCoconut = Instantiate(_coconutPrefab, hand.transform.position, Quaternion.identity);
+        _currentCoconut = PhotonNetwork.Instantiate(_coconutPrefab.name, hand.transform.position, Quaternion.identity, 0);
         //_currentCoconut.transform.SetParent(null);
         var rigidBody = _currentCoconut.GetComponent<Rigidbody>();
         //rigidBody.isKinematic = false;

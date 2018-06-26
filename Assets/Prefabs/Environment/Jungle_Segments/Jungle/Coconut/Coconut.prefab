@@ -33,6 +33,7 @@ GameObject:
   - component: {fileID: 65158084128935396}
   - component: {fileID: 114219659854573946}
   - component: {fileID: 114065527494177600}
+  - component: {fileID: 114786754140578104}
   m_Layer: 0
   m_Name: Coconut
   m_TagString: Coconut
@@ -313,11 +314,12 @@ MonoBehaviour:
   group: 0
   OwnerShipWasTransfered: 0
   prefixBackup: -1
-  synchronization: 0
+  synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 114065527494177600}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
@@ -336,6 +338,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waterSplashSound: {fileID: 8300000, guid: 53a64fe92da592d4488513f9cacb679c, type: 3}
   _woodHitSound: {fileID: 8300000, guid: b259eca9de0f68041bf3067953c6649d, type: 3}
+--- !u!114 &114786754140578104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469902503049412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2581cbf5437cd44903d1d4b83020e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownAdditionalPhotonviews: []
 --- !u!114 &114856964691131948
 MonoBehaviour:
   m_ObjectHideFlags: 1
