@@ -7,15 +7,17 @@ public class AmmoContainer : Photon.PunBehaviour, IPunObservable {
 	public int ammo;
 	public TextMesh ammoText3D;
 
+	private int syncAmmo;
+
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
         {
-            stream.SendNext(ammo);
+			stream.SendNext(syncAmmo);
         }
         else
         {
-            ammo = (int)stream.ReceiveNext();
+			syncAmmo = (int)stream.ReceiveNext();
         }
     }
 
@@ -27,6 +29,13 @@ public class AmmoContainer : Photon.PunBehaviour, IPunObservable {
 
 	// Update is called once per frame
 	void Update () {
+		if (!photonView.isMine) {
+			ammo = syncAmmo;
+		}
+		if (photonView.isMine) {
+			syncAmmo = ammo;
+		}
+
         ammoText3D.text = "Ammo: " + ammo.ToString();
 	}
 }
