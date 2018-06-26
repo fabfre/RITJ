@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AmmoContainer : Photon.MonoBehaviour, IPunObservable {
+public class AmmoContainer : Photon.PunBehaviour, IPunObservable {
 
 	public int ammo;
 	public TextMesh ammoText3D;
