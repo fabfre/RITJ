@@ -1735,8 +1735,8 @@ GameObject:
   - component: {fileID: 114362545086535548}
   - component: {fileID: 54549172376923018}
   - component: {fileID: 65562037140804308}
-  - component: {fileID: 114036981632411326}
   - component: {fileID: 114085983135995114}
+  - component: {fileID: 114036981632411326}
   m_Layer: 0
   m_Name: Monkey
   m_TagString: Monkey
@@ -9038,7 +9038,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.32992616, y: 0.4329751, z: 0.5504234}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0.03833392, y: 0.19095169, z: 0.22825311}
 --- !u!82 &82391649348997258
 AudioSource:
