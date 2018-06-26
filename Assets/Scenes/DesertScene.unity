@@ -1699,6 +1699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  text3D: {fileID: 1366264548}
 --- !u!1 &210381196
 GameObject:
   m_ObjectHideFlags: 0
@@ -7573,9 +7574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80bb9d14fd132469587017ffa71c1bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
-  pos: {x: 0, y: 0, z: 0}
-  cameraPos: {fileID: 281196843}
   headPrefab: {fileID: 1970653856868070, guid: a67bb972484d64a4a8b5954c3550a27f, type: 2}
   leftHandPrefab: {fileID: 1152851664196388, guid: d29a82c712003483b99c480235e58fb0,
     type: 2}
@@ -11338,9 +11336,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValues: {fileID: 204420952}
-  scoreText: {fileID: 0}
   zeppelinAimScore: 1000
   luftballonAimScore: 2500
+  KrokodilAimScore: 0
   text3D: {fileID: 1366264548}
 --- !u!65 &1541538277
 BoxCollider:

@@ -16,32 +16,17 @@ public class hitBird : Photon.MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag ("HitBird"))
 		{
-			PhotonView photonView = PhotonView.Get (this);
-
-			photonView.RPC("SetCounterText", PhotonTargets.All, other.gameObject.GetPhotonView().viewID);
+			scoreValues.score = scoreValues.score - Bird;
 		}
 
 		if (other.gameObject.CompareTag ("Coconut"))
 		{
-			PhotonView photonView = this.photonView;
-
-			photonView.RPC("SetCounterText", PhotonTargets.AllBuffered, other.gameObject.GetPhotonView().viewID);
+			scoreValues.score = scoreValues.score - Bird;
 		}
 
 		if (other.gameObject.CompareTag ("Kroko"))
 		{
-			PhotonView photonView = this.photonView;
-
-			photonView.RPC("SetCounterText", PhotonTargets.AllBuffered, other.gameObject.GetPhotonView().viewID);
+			scoreValues.score = scoreValues.score - Bird;
 		}
 	}
-
-    [PunRPC]
-    public void SetCounterText(int other)
-    {
-        PhotonNetwork.Destroy(PhotonView.Find(other));
-
-        scoreValues.score = scoreValues.score - Bird;
-		text3D.text = "Score: " + scoreValues.score.ToString();
-    }
 }
