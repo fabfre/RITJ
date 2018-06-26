@@ -7,21 +7,30 @@ public class ScoreValues : Photon.MonoBehaviour, IPunObservable {
 	public int score;
 	public TextMesh text3D;
 
+	private int syncScore;
+
 	// Use this for initialization
 	void Start () {
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		text3D.text = score.ToString ();
+		if (!PhotonView.isMine) {
+			score = syncScore;
+		}
+		if (photonView.isMine) {
+			syncScore = score;
+		}
+
+		text3D.text = "Score: " + score.ToString ();
 	}
 
 	void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
 	{
 		if (stream.isWriting) {
-			stream.SendNext (score);
+			stream.SendNext (syncScore);
 		} else {
-			score = (int)stream.ReceiveNext ();
+			syncScore = (int)stream.ReceiveNext ();
 		}
 	}
 
