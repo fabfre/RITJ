@@ -15,8 +15,6 @@ public class Coconut : MonoBehaviour
 
     private void Start()
     {
-        this.GetComponent<VRTK_InteractableObject>().enabled = true;
-        this.GetComponent<VRTK_InteractableObject>().isGrabbable = true;
         GetComponent<AudioSource>().clip = _woodHitSound;
     }
 

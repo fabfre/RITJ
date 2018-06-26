@@ -265,8 +265,8 @@ MonoBehaviour:
   scale: 0
   velocity: 1
   angularVelocity: 1
-  useLocalValues: 1
-  onChangeOnly: 1
+  useLocalValues: 0
+  onChangeOnly: 0
 --- !u!114 &114177406133066340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -317,7 +317,7 @@ MonoBehaviour:
   synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
-  ownershipTransfer: 1
+  ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 114065527494177600}
   ObservedComponentsFoldoutOpen: 1
