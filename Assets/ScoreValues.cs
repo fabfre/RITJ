@@ -15,7 +15,7 @@ public class ScoreValues : Photon.MonoBehaviour, IPunObservable {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!PhotonView.isMine) {
+		if (!photonView.isMine) {
 			score = syncScore;
 		}
 		if (photonView.isMine) {
