@@ -13,7 +13,7 @@ public class ScoreValues : Photon.MonoBehaviour, IPunObservable {
 	
 	// Update is called once per frame
 	void Update () {
-		text3D.text = score.ToString ();
+        text3D.text = "Score: " + score.ToString ();
 	}
 
 	void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
