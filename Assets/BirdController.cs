@@ -9,7 +9,7 @@ public class BirdController : MonoBehaviour {
 
 	void Start(){
 
-		GameObject d = GameObject.Find ("Canvas/AmmoText3D");
+		GameObject d = GameObject.Find ("AmmoText3D");
 		ammoText3D = d.GetComponent<TextMesh>();
 	}
 

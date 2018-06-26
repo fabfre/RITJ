@@ -21,6 +21,20 @@ public class hitBird : Photon.MonoBehaviour {
 
             photonView.RPC("SetCounterText", PhotonTargets.AllBuffered, other.gameObject.GetPhotonView().viewID);
 		}
+
+		if (other.gameObject.CompareTag ("Coconut"))
+		{
+			PhotonView photonView = this.photonView;
+
+			photonView.RPC("SetCounterText", PhotonTargets.AllBuffered, other.gameObject.GetPhotonView().viewID);
+		}
+
+		if (other.gameObject.CompareTag ("Kroko"))
+		{
+			PhotonView photonView = this.photonView;
+
+			photonView.RPC("SetCounterText", PhotonTargets.AllBuffered, other.gameObject.GetPhotonView().viewID);
+		}
 	}
 
     [PunRPC]

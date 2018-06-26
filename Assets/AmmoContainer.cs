@@ -9,7 +9,7 @@ public class AmmoContainer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		ammo = 5;
+		ammo = 30;
 		ammoText3D.text = "Ammo: " + ammo.ToString ();
 	}
 
