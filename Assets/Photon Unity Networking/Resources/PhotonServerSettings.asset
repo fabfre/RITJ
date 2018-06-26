@@ -48,4 +48,5 @@ MonoBehaviour:
   - setCounterText
   - SetCounterText
   - NetworkShoot
+  - NetworkLoad
   DisableAutoOpenWizard: 1

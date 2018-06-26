@@ -41,6 +41,6 @@ public class Leaveblower : Photon.MonoBehaviour {
 	[PunRPC]
 	void NetworkLoad()
 	{
-		ammocontainer.ammo++;
+        ammocontainer.ammo = ammocontainer.ammo + 1;
 	}
 }
