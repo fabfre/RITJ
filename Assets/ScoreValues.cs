@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreValues : Photon.MonoBehaviour, IPunObservable {
+public class ScoreValues : Photon.PunBehaviour, IPunObservable {
 
 	public int score;
 	public TextMesh text3D;

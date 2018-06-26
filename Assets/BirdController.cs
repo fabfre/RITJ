@@ -20,8 +20,28 @@ public class BirdController : MonoBehaviour {
 
 		if (dis < 2){
 			lf.Load ();
+            PhotonNetwork.RaiseEvent(0, this.gameObject.GetPhotonView().viewID, true, null);
 			Destroy (this.gameObject);
 		}
 	}
+
+    private void OnEnable()
+    {
+        PhotonNetwork.OnEventCall += this.OnEvent;
+    }
+
+    private void OnDisable()
+    {
+        PhotonNetwork.OnEventCall -= this.OnEvent;
+    }
+
+    void OnEvent(byte eventcode, object content, int senderid)
+    {
+        if (eventcode == 0)
+        {
+            Debug.Log("OnEvent CODE = 1: " + content);
+            PhotonNetwork.Destroy(PhotonView.Find((int)content));
+        }
+    }
 
 }
