@@ -26,10 +26,11 @@ GameObject:
   - component: {fileID: 82077438878614820}
   - component: {fileID: 114740595950173892}
   - component: {fileID: 65452851893318206}
-  - component: {fileID: 114985263990034908}
+  - component: {fileID: 65638539572900842}
+  - component: {fileID: 114563659981046308}
   m_Layer: 0
   m_Name: BulletCoconut
-  m_TagString: Untagged
+  m_TagString: HitBird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,18 +125,30 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118645055336442}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.0036346298, y: 0.005623697, z: 0.004171927}
   m_Center: {x: 0.000058384834, y: -0.0028528927, z: -0.0020369748}
+--- !u!65 &65638539572900842
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118645055336442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0034663773, y: 0.004681225, z: 0.0034663766}
+  m_Center: {x: 0, y: -0.00016994061, z: 0}
 --- !u!82 &82077438878614820
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118645055336442}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -209,33 +222,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114563659981046308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118645055336442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e57bb4f3a1ab43b0b81f89b63a40166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValues: {fileID: 0}
+  scoreText: {fileID: 0}
+  zeppelinAimScore: 10
+  luftballonAimScore: 10
+  MonkeyAimScore: 3000
+  KrokodilAimScore: 1500
+  text3D: {fileID: 0}
 --- !u!114 &114740595950173892
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1118645055336442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be7551555af94244a872d0af7d30372c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _waterSplashSound: {fileID: 8300000, guid: 53a64fe92da592d4488513f9cacb679c, type: 3}
   _woodHitSound: {fileID: 8300000, guid: b259eca9de0f68041bf3067953c6649d, type: 3}
---- !u!114 &114985263990034908
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1118645055336442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8394fdbb32fb4914a33db6e1ba1ba5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreValues: {fileID: 0}
-  scoreText: {fileID: 0}
-  zeppelinAimScore: 100
-  luftballonAimScore: 100
-  KrokodilAimScore: 100
-  text3D: {fileID: 0}
