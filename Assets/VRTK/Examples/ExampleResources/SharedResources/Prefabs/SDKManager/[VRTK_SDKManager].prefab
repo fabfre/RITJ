@@ -5036,7 +5036,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.05
-  far clip plane: 1000
+  far clip plane: 10000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -8039,6 +8039,7 @@ MonoBehaviour:
   scoreValues: {fileID: 0}
   scoreText: {fileID: 0}
   Bird: 150
+  text3D: {fileID: 0}
 --- !u!114 &114743014625679918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8476,6 +8477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9daf34a9b83f143d3845cc6fb9e32d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ammoText3D: {fileID: 0}
+  ammoContainer: {fileID: 0}
   quickSelect: 2
   triggerButtonEvents: 1
   gripButtonEvents: 1
@@ -8819,6 +8822,7 @@ MonoBehaviour:
   scoreValues: {fileID: 0}
   scoreText: {fileID: 0}
   Bird: 50
+  text3D: {fileID: 0}
 --- !u!114 &114979577415812632
 MonoBehaviour:
   m_ObjectHideFlags: 1

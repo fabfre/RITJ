@@ -12,12 +12,13 @@ public class NetworkManager : MonoBehaviour
 
 	private bool initiated;
 
+
     // Use this for initialization
     void Start()
     {
         //PhotonNetwork.logLevel = PhotonLogLevel.Full;
         //PhotonNetwork.ConnectUsingSettings(_gameVersion);
-		this.initiated = false;
+		this.initiated = false;	
     }
 
     // Update is called once per frame

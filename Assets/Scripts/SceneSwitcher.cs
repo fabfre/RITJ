@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,11 +22,9 @@ public class SceneSwitcher : Photon.PunBehaviour, IPunObservable {
 
     private void OnTriggerEnter(Collider other)
     {
-		PhotonNetwork.LoadLevel("DesertScene");
-
+		PhotonNetwork.LoadLevel ("DesertScene");
 		PhotonView view = other.GetComponentInParent<PhotonView> ();
 		Debug.Log (view);
-		//PhotonNetwork.LoadLevel("DesertScene"); // Wieder entfernen
 
 		if (PhotonNetwork.isMasterClient && view != null) {
 			if (view.isMine) {
