@@ -23,27 +23,24 @@ public class BulletController : Photon.MonoBehaviour {
             PhotonView photonView = this.photonView;
             //SetCounterText(other.gameObject.GetPhotonView().viewID);
             scoreValues.score = scoreValues.score + luftballonAimScore;
-            PhotonNetwork.RaiseEvent(1, other.gameObject.GetPhotonView().viewID, true, null);
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
+            PhotonNetwork.Destroy(this.gameObject);
+            PhotonNetwork.Destroy(other.gameObject);
         }
 
         if (other.gameObject.CompareTag("ZeppelinAim"))
         {
             //SetCounterText(other.gameObject.GetPhotonView().viewID);
             scoreValues.score = scoreValues.score + zeppelinAimScore;
-            PhotonNetwork.RaiseEvent(1, other.gameObject.GetPhotonView().viewID, true, null);
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
+            PhotonNetwork.Destroy(this.gameObject);
+            PhotonNetwork.Destroy(other.gameObject);
         }
 
 		if (other.gameObject.CompareTag("Krokodil"))
 		{
 			//SetCounterText(other.gameObject.GetPhotonView().viewID);
             scoreValues.score = scoreValues.score + KrokodilAimScore;
-			PhotonNetwork.RaiseEvent(1, other.gameObject.GetPhotonView().viewID, true, null);
-			Destroy(other.gameObject);
-			Destroy(this.gameObject);
+            PhotonNetwork.Destroy(this.gameObject);
+            PhotonNetwork.Destroy(other.gameObject);
 		}
     }
 
@@ -64,23 +61,4 @@ public class BulletController : Photon.MonoBehaviour {
 
 		////PhotonNetwork.RaiseEvent(0, text3D.text, true, null);
     //}
-
-    private void OnEnable()
-    {
-        PhotonNetwork.OnEventCall += this.OnEvent;
-    }
-
-    private void OnDisable()
-    {
-        PhotonNetwork.OnEventCall -= this.OnEvent;
-    }
-
-    void OnEvent(byte eventcode, object content, int senderid)
-    {
-        if (eventcode == 1)
-        {
-            Debug.Log("OnEvent CODE = 1: " + content);
-            PhotonNetwork.Destroy(PhotonView.Find((int)content));
-        }
-    }
 }
