@@ -22,7 +22,6 @@ public class SceneSwitcher : Photon.PunBehaviour, IPunObservable {
 
     private void OnTriggerEnter(Collider other)
     {
-		PhotonNetwork.LoadLevel ("DesertScene");
 		PhotonView view = other.GetComponentInParent<PhotonView> ();
 		Debug.Log (view);
 
