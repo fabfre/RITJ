@@ -23,7 +23,6 @@ public class AmmoContainer : Photon.PunBehaviour, IPunObservable {
 
     // Use this for initialization
     void Start () {
-		ammo = 5;
 		ammoText3D.text = "Ammo: " + ammo.ToString ();
 	}
 

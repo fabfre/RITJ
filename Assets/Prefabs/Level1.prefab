@@ -5206,7 +5206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d4988c7ac94f0e9a31dae852166eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: 0
+  ammo: 100
   ammoText3D: {fileID: 102314053116373720}
 --- !u!114 &114387583919504074
 MonoBehaviour:
