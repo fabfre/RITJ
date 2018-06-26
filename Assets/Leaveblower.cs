@@ -24,11 +24,23 @@ public class Leaveblower : Photon.MonoBehaviour {
         photonView.RPC("NetworkShoot", PhotonTargets.All);
 	}
 
+	public void Load() {
+		photonView.RPC ("NetworkLoad", PhotonTargets.All);
+	}
+
     [PunRPC]
     void NetworkShoot()
     {
-        GameObject proj = (GameObject)Instantiate(projectile, firepoint.position, firepoint.rotation);
-        proj.GetComponent<Rigidbody>().velocity = firepoint.forward * power;
-		ammocontainer.ammo = ammocontainer.ammo - 1;
+		if (ammocontainer.ammo > 0) {
+			GameObject proj = (GameObject)Instantiate (projectile, firepoint.position, firepoint.rotation);
+			proj.GetComponent<Rigidbody> ().velocity = firepoint.forward * power;
+			ammocontainer.ammo = ammocontainer.ammo - 1;
+		}
     }
+
+	[PunRPC]
+	void NetworkLoad()
+	{
+		ammocontainer.ammo++;
+	}
 }

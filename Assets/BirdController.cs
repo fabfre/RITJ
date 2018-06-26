@@ -14,16 +14,12 @@ public class BirdController : MonoBehaviour {
 	}
 
 	public void loadAmmo(){
-
-		Vector3 lbpos = GameObject.Find ("Leaveblower").transform.position;
-		AmmoContainer ammoContainer = GameObject.Find ("AmmoContainer").GetComponent("AmmoContainer") as AmmoContainer;
-
+		Leaveblower lf = GameObject.Find ("Leaveblower") as Leaveblower;
+		Vector3 lbpos = lf.transform.position;
+		lf.Load ();
 		float dis = Vector3.Magnitude (lbpos - transform.position);
 
 		if (dis < 2){
-
-			ammoContainer.ammo += 1;
-			ammoText3D.text = "Ammo:" + ammoContainer.ammo;
 			Destroy (this.gameObject);
 		}
 	}
