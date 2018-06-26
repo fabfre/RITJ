@@ -21,9 +21,6 @@ public class SceneSwitcherJungle : Photon.PunBehaviour, IPunObservable {
 
 	private void OnTriggerEnter(Collider other)
 	{
-		PhotonNetwork.LoadLevel("JungleScene");
-
-		//PhotonNetwork.LoadLevel("JungleScene");
 		PhotonView view = other.GetComponentInParent<PhotonView> ();
 		Debug.Log (view);
 		if (PhotonNetwork.isMasterClient && view != null) {
@@ -59,7 +56,6 @@ public class SceneSwitcherJungle : Photon.PunBehaviour, IPunObservable {
 
 		if (selfTouch == true && partnerTouch == true && PhotonNetwork.isMasterClient)
 		{
-			Debug.Log ("Lade nächste Szene");
 			PhotonNetwork.LoadLevel("JungleScene");
 		}
 	}
