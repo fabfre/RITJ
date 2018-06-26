@@ -23,7 +23,7 @@ public class BulletController : Photon.MonoBehaviour {
             PhotonView photonView = this.photonView;
             //SetCounterText(other.gameObject.GetPhotonView().viewID);
             scoreValues.score = scoreValues.score + luftballonAimScore;
-            PhotonNetwork.Destroy(this.gameObject);
+            Destroy(this.gameObject);
             PhotonNetwork.Destroy(other.gameObject);
         }
 
@@ -31,7 +31,7 @@ public class BulletController : Photon.MonoBehaviour {
         {
             //SetCounterText(other.gameObject.GetPhotonView().viewID);
             scoreValues.score = scoreValues.score + zeppelinAimScore;
-            PhotonNetwork.Destroy(this.gameObject);
+            Destroy(this.gameObject);
             PhotonNetwork.Destroy(other.gameObject);
         }
 
@@ -39,7 +39,7 @@ public class BulletController : Photon.MonoBehaviour {
 		{
 			//SetCounterText(other.gameObject.GetPhotonView().viewID);
             scoreValues.score = scoreValues.score + KrokodilAimScore;
-            PhotonNetwork.Destroy(this.gameObject);
+            Destroy(this.gameObject);
             PhotonNetwork.Destroy(other.gameObject);
 		}
     }
