@@ -264,6 +264,7 @@ MonoBehaviour:
   projectile: {fileID: 0}
   power: 65
   firepoint: {fileID: 4111922775305942}
+  ammocontainer: {fileID: 0}
 --- !u!114 &114231954022789526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -338,6 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  text3D: {fileID: 0}
 --- !u!114 &114446719605064720
 MonoBehaviour:
   m_ObjectHideFlags: 1
