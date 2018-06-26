@@ -14,7 +14,7 @@ public class BirdController : MonoBehaviour {
 	}
 
 	public void loadAmmo(){
-		Leaveblower lf = GameObject.Find ("Leaveblower") as Leaveblower;
+		Leaveblower lf = GetComponent("Leaveblower") as Leaveblower;
 		Vector3 lbpos = lf.transform.position;
 		lf.Load ();
 		float dis = Vector3.Magnitude (lbpos - transform.position);
