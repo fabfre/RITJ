@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BirdController : MonoBehaviour {
+public class BirdController : Photon.MonoBehaviour {
 
 	private TextMesh ammoText3D;
 	private ScoreValues ammoV;
@@ -37,12 +37,13 @@ public class BirdController : MonoBehaviour {
 
     void OnEvent(byte eventcode, object content, int senderid)
     {
+        Debug.Log("OnEvent CODE = 1: " + content);
+
         if (eventcode == 0)
         {
             if (PhotonNetwork.isMasterClient) {
                 PhotonNetwork.Destroy(this.gameObject);
             }
-            //Debug.Log("OnEvent CODE = 1: " + content);
 
         }
     }
