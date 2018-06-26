@@ -14,6 +14,8 @@ public class Monkey : MonoBehaviour
 
     private GameObject _currentCoconut;
 
+    private bool _hasDidFleeDone = false;
+
     public void GrabCoconut()
     {
         /*
@@ -37,7 +39,26 @@ public class Monkey : MonoBehaviour
         rigidBody.velocity = (new Vector3(dir.x, 0, dir.z)).normalized * _throwingForce;
     }
 
-	private void Start()
+    public void Flee()
+    {
+        GetComponent<Animator>().SetTrigger("flee");
+        _hasDidFleeDone = true;
+
+        Invoke("ResetIdle", 60);
+    }
+
+    private void ResetIdle()
+    {
+        GetComponent<Animator>().SetTrigger("idle");
+        _hasDidFleeDone = false;
+    }
+
+    private void HasDidFleeDone()
+    {
+
+    }
+
+    private void Start()
 	{
         _closeToPlayer = IsInRange();
 
@@ -49,6 +70,16 @@ public class Monkey : MonoBehaviour
 	
 	private void Update()
 	{
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Flee();
+        }
+
+        if (_hasDidFleeDone)
+        {
+            return;
+        }
+
 		if (!_closeToPlayer && IsInRange())
         {
             _closeToPlayer = true;

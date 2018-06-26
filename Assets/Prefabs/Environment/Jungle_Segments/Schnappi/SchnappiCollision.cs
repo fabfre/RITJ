@@ -6,7 +6,6 @@ public class SchnappiCollision : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-		Debug.Log ("I'm hit!");
         if (other.name == "Coconut")
         {
             transform.parent.GetComponent<Schnappi>().Flee();

@@ -40,14 +40,14 @@ public class CoconutController : Photon.MonoBehaviour {
 		{
 			SetCounterText(other.gameObject.GetPhotonView().viewID);
 			PhotonNetwork.RaiseEvent(1, other.gameObject.GetPhotonView().viewID, true, null);
-			other.GetComponent<Schnappi> ().Flee ();
+			other.GetComponent<Schnappi>().Flee ();
 			Destroy(this.gameObject);
 		}
 		if (other.gameObject.CompareTag("Monkey"))
 		{
 			SetCounterText(other.gameObject.GetPhotonView().viewID);
 			PhotonNetwork.RaiseEvent(1, other.gameObject.GetPhotonView().viewID, true, null);
-			Destroy(other.gameObject);
+            other.GetComponent<Monkey>().Flee();
 			Destroy(this.gameObject);
 		}
 	}
