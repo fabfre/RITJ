@@ -14761,6 +14761,7 @@ MonoBehaviour:
   projectile: {fileID: 1541538275}
   power: 65
   firepoint: {fileID: 607948816}
+  ammocontainer: {fileID: 2001892657}
 --- !u!65 &1962580123
 BoxCollider:
   m_ObjectHideFlags: 0

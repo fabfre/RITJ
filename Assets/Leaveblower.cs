@@ -7,6 +7,7 @@ public class Leaveblower : Photon.MonoBehaviour {
 	public GameObject projectile;
 	public float power;
 	public Transform firepoint;
+	public AmmoContainer ammocontainer;
 
 	// Use this for initialization
 	void Start () {
@@ -28,5 +29,6 @@ public class Leaveblower : Photon.MonoBehaviour {
     {
         GameObject proj = (GameObject)Instantiate(projectile, firepoint.position, firepoint.rotation);
         proj.GetComponent<Rigidbody>().velocity = firepoint.forward * power;
+		ammocontainer.ammo = ammocontainer.ammo - 1;
     }
 }

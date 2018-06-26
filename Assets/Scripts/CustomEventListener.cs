@@ -512,8 +512,6 @@
 				Leaveblower lc = gr.GetGrabbedObject ().GetComponent ("Leaveblower") as Leaveblower;
 				if (lc != null && ammoContainer.ammo > 0) {
 					lc.Shoot ();
-					ammoContainer.ammo =  ammoContainer.ammo - 1;
-					//ammoText3D.text = "Ammo: " + ammoContainer.ammo.ToString ();
 				}
 
 				CoconutLoader bc = gr.GetGrabbedObject ().GetComponent<CoconutLoader>();
