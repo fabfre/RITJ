@@ -516,13 +516,16 @@
 					//ammoText3D.text = "Ammo: " + ammoContainer.ammo.ToString ();
 				}
 
-				BirdController bc = gr.GetGrabbedObject ().GetComponent<BirdController>();
+				CoconutLoader bc = gr.GetGrabbedObject ().GetComponent<CoconutLoader>();
 				Debug.Log (gr.GetGrabbedObject().name);
-				Debug.Log("huhuhu");
-
 				if (bc != null) {
 					bc.loadAmmo();
-					Debug.Log("bc load ammo test");
+				}
+
+				BirdController x = gr.GetGrabbedObject ().GetComponent<BirdController>();
+				Debug.Log (gr.GetGrabbedObject().name);
+				if (x != null) {
+					x.loadAmmo();
 				}
 
 			}

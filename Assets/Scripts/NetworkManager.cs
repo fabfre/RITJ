@@ -6,12 +6,6 @@ using UnityEngine.UI;
 public class NetworkManager : MonoBehaviour
 {
 
-    public int type;
-    public Vector3 pos;
-    public Camera cameraPos;
-
-    //[SerializeField] Text networkText;
-
     public GameObject headPrefab;
     public GameObject leftHandPrefab;
     public GameObject rightHandPrefab;

@@ -7,6 +7,8 @@ public class BulletController : Photon.MonoBehaviour {
 	public ScoreValues scoreValues;
     public int zeppelinAimScore;
 	public int luftballonAimScore;
+
+	public int KrokodilAimScore;
 	public TextMesh text3D;
 
     void Start()
@@ -19,7 +21,6 @@ public class BulletController : Photon.MonoBehaviour {
         if (other.gameObject.CompareTag("LuftballonAim"))
         {
             PhotonView photonView = this.photonView;
-
             SetCounterText(other.gameObject.GetPhotonView().viewID);
             PhotonNetwork.RaiseEvent(1, other.gameObject.GetPhotonView().viewID, true, null);
             Destroy(other.gameObject);
@@ -33,6 +34,14 @@ public class BulletController : Photon.MonoBehaviour {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
+
+		if (other.gameObject.CompareTag("Krokodil"))
+		{
+			SetCounterText(other.gameObject.GetPhotonView().viewID);
+			PhotonNetwork.RaiseEvent(1, other.gameObject.GetPhotonView().viewID, true, null);
+			Destroy(other.gameObject);
+			Destroy(this.gameObject);
+		}
     }
 
     public void SetCounterText(int other)
@@ -45,6 +54,10 @@ public class BulletController : Photon.MonoBehaviour {
         {
             scoreValues.score = scoreValues.score + luftballonAimScore;
         }
+		if (PhotonView.Find(other).gameObject.CompareTag("Krokodil"))
+		{
+			scoreValues.score = scoreValues.score + KrokodilAimScore;
+		}
 
 		text3D.text = "Score: " + scoreValues.score.ToString();
 		PhotonNetwork.RaiseEvent(0, text3D.text, true, null);
