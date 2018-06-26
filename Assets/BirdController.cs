@@ -21,7 +21,7 @@ public class BirdController : MonoBehaviour {
 		if (dis < 2){
 			lf.Load ();
             PhotonNetwork.RaiseEvent(0, this.gameObject.GetPhotonView().viewID, true, null);
-			Destroy (this.gameObject);
+			//Destroy (this.gameObject);
 		}
 	}
 
@@ -39,8 +39,11 @@ public class BirdController : MonoBehaviour {
     {
         if (eventcode == 0)
         {
-            Debug.Log("OnEvent CODE = 1: " + content);
-            PhotonNetwork.Destroy(PhotonView.Find((int)content));
+            if (PhotonNetwork.isMasterClient) {
+                PhotonNetwork.Destroy(this.gameObject);
+            }
+            //Debug.Log("OnEvent CODE = 1: " + content);
+
         }
     }
 
