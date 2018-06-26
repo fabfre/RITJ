@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class Monkey : Photon.MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class Monkey : Photon.MonoBehaviour
         var hand = transform.Find("rig/MCH-hand_ik_socket.R");
         if (hand == null) Debug.Log("asdf");
         _currentCoconut = PhotonNetwork.Instantiate(_coconutPrefab.name, hand.transform.position, Quaternion.identity, 0);
+        _currentCoconut.GetComponent<VRTK_InteractableObject>().enabled = true;
+        _currentCoconut.GetComponent<VRTK_InteractableObject>().isGrabbable = true;
         //_currentCoconut.transform.SetParent(null);
         var rigidBody = _currentCoconut.GetComponent<Rigidbody>();
         //rigidBody.isKinematic = false;
