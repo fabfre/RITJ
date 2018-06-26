@@ -44,7 +44,8 @@ public class Monkey : Photon.MonoBehaviour
 
     public void Flee()
     {
-		_currentCoconut.GetPhotonView().RPC("NetworkFlee", PhotonTargets.All);
+		PhotonView photonView = _currentCoconut.GetComponent<PhotonView>;
+		photonView.RPC ("NetworkFlee", PhotonTargets.All); 
     }
 
     [PunRPC]
