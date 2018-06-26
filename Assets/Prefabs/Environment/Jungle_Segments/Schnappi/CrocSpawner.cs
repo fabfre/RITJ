@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrocSpawner : MonoBehaviour
+public class CrocSpawner : Photon.MonoBehaviour
 {
     public float radius;
     public GameObject crocPrefab;
@@ -33,6 +33,6 @@ public class CrocSpawner : MonoBehaviour
     {
         float rand = Random.Range(0, 2 * Mathf.PI);
         var pos = new Vector3(Mathf.Cos(rand) * radius, 0, Mathf.Sin(rand) * radius);
-        Instantiate(crocPrefab, pos, Quaternion.Euler(0, 0, 0));
+        PhotonNetwork.Instantiate(crocPrefab.name, pos, Quaternion.Euler(0, 0, 0), 0);
     }
 }
